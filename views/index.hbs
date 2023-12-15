@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin-bottom: 23px;
+    padding: 20px;
+}
+
+strong {
+    color: #4caf50;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Actualités</h1>
+    
+    {{#if actualites.length}}
+        <ul>
+            {{#each actualites}}
+                <li>
+                    <strong>{{titre}}</strong> 
+                    <br>
+                    {{description}} 
+                    <br>
+                    ({{date_publication}})
+
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>Aucune actualité pour le moment.</p>
+    {{/if}}
+</body>
+</html>
